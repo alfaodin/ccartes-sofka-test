@@ -9,14 +9,15 @@ npm install
 
 ## Running locally
 
+```bash
   npm run install:all        # install deps in both apps
+```
+```bash
   npm run backend:start      # starts the backend on :3002
+```
+```bash
   npm run frontend:dev       # starts Angular dev server on :4200
-                             # /bp is proxied to the backend automatically
-
---- Running with Docker ---
-  
-
+```
 
 ## RUN ALL THE APP USING DOCKER COMPOSE
 
