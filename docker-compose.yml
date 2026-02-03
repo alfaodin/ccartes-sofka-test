@@ -1,0 +1,19 @@
+services:
+  backend:
+    build: ./apps/backend
+    expose:
+      - "3002"
+    # Persist the products.json data file across container restarts.
+    # Docker initialises the volume from the image on first run.
+    volumes:
+      - backend-data:/app/dist/data
+
+  frontend:
+    build: ./apps/frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+
+volumes:
+  backend-data:

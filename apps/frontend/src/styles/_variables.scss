@@ -1,0 +1,80 @@
+// Banking Color Palette using OKLCH
+:root {
+  // Primary colors - Professional blue palette
+  --primary-color: oklch(32.085% 0.00383 264.582);
+  --primary-dark: oklch(32.085% 0.00383 264.582);
+  --primary-light: oklch(76.039% 0.00009 271.152);
+  --primary-white: oklch(100% 0.00011 271.152);
+  --primary-hover: oklch(75.197% 0.1064 251.417);
+
+  // Secondary colors - Gray scale
+  --secondary-gray: oklch(55% 0.02 240);
+  --secondary-light: oklch(95% 0.01 240);
+  --secondary-dark: oklch(35% 0.02 240);
+
+  // Semantic colors
+  --success-green: oklch(55% 0.15 140);
+  --success-light: oklch(85% 0.08 140);
+  --error-red: oklch(55% 0.20 20);
+  --error-light: oklch(90% 0.10 20);
+  --warning-yellow: oklch(70% 0.15 80);
+  --warning-light: oklch(90% 0.08 80);
+  --info-blue: oklch(60% 0.15 230);
+
+  // Text colors
+  --text-primary: oklch(20% 0.02 240);
+  --text-secondary: oklch(45% 0.02 240);
+  --text-disabled: oklch(65% 0.02 240);
+  --text-white: oklch(100% 0 0);
+
+  // Background colors
+  --background-main: oklch(0.97 0 0);
+  --background-card: oklch(100% 0 0);
+  --background-hover: oklch(96% 0.01 240);
+  --background-disabled: oklch(93% 0.01 240);
+
+  // Border colors
+  --border-color: oklch(85% 0.02 240);
+  --border-focus: oklch(45% 0.18 240);
+  --border-error: oklch(55% 0.20 20);
+
+  // Spacing scale
+  --spacing-xs: 0.25rem;    // 4px
+  --spacing-sm: 0.5rem;     // 8px
+  --spacing-md: 1rem;       // 16px
+  --spacing-lg: 1.5rem;     // 24px
+  --spacing-xl: 2rem;       // 32px
+  --spacing-2xl: 3rem;      // 48px
+
+  // Border radius
+  --radius: 0px;
+  --radius-full: 9999px;
+
+  // Shadows
+  --shadow-sm: 0 1px 3px oklch(0% 0 0 / 0.1);
+  --shadow-md: 0 4px 6px oklch(0% 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px oklch(0% 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px oklch(0% 0 0 / 0.15);
+
+  // Transitions
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.2s ease;
+  --transition-slow: 0.3s ease;
+
+  // Z-index layers
+  --z-dropdown: 1000;
+  --z-modal: 2000;
+  --z-tooltip: 3000;
+
+  // Breakpoints (for use in SCSS)
+  --breakpoint-mobile: 480px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-desktop: 1024px;
+  --breakpoint-wide: 1280px;
+}
+
+// SCSS Breakpoint variables
+$mobile: 480px;
+$tablet: 820px;
+$desktop: 1024px;
+$wide: 1280px;

@@ -1,0 +1,99 @@
+<div class="product-list-container">
+  <div class="product-white-box">
+    <div class="header">
+      <h1 class="title" i18n="Product list title@@productListTitle">Productos Financieros</h1>
+    </div>
+
+    <!-- Error Message -->
+    @if (error$ | async; as error) {
+    <div class="alert alert-error">
+      <span class="alert-message">{{ error }}</span>
+      <button type="button" class="alert-close" (click)="clearError()" aria-label="Close">×</button>
+    </div>
+    }
+
+    <!-- Search Bar -->
+    <div class="search-add-button-container">
+      <div class="search-container">
+        <div class="search-input-wrapper">
+          <span class="search-icon">🔍</span>
+          <input type="text" class="search-input" placeholder="Buscar productos por nombre, descripción o ID..."
+            i18n-placeholder="Search placeholder@@searchPlaceholder" (input)="onSearch($event)"
+            aria-label="Buscar productos" i18n-aria-label="Search aria label@@searchAriaLabel" />
+        </div>
+      </div>
+      <button type="button" class="btn btn-primary" (click)="onCreateProduct()">
+        <span class="icon">+</span>
+        <span i18n="Add product button@@addProductBtn">Agregar Producto</span>
+      </button>
+    </div>
+
+    <!-- Loading State -->
+    @if (loading$ | async) {
+    <div class="loading-container">
+      <div class="spinner"></div>
+      <p i18n="Loading products message@@loadingProducts">Cargando productos...</p>
+    </div>
+    }
+
+    <!-- Products Table -->
+    @if (filteredAndPaginatedProducts$ | async; as data) {
+    @if (!( loading$ | async)) {
+    @if (data.total === 0) {
+    <div class="empty-state">
+      <span class="empty-icon">📦</span>
+      <h3 i18n="No products found title@@noProductsTitle">No se encontraron productos</h3>
+      <p i18n="No products found message@@noProductsMessage">Intenta ajustar tu búsqueda o crear un nuevo producto.</p>
+    </div>
+    } @else {
+    <div class="table-container">
+      <table class="products-table">
+        <thead>
+          <tr>
+            <th i18n="Table header logo@@tableHeaderLogo">Logo</th>
+            <th i18n="Table header name@@tableHeaderName">Nombre</th>
+            <th i18n="Table header description@@tableHeaderDescription">Descripción</th>
+            <th i18n="Table header release date@@tableHeaderReleaseDate">Fecha de Lanzamiento</th>
+            <th i18n="Table header revision date@@tableHeaderRevisionDate">Fecha de Revisión</th>
+            <th class="actions-column" i18n="Table header actions@@tableHeaderActions">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (product of data.products; track product.id) {
+          <tr>
+            <td class="logo-cell">
+              <img [src]="product.logo" [alt]="product.name + ' logo'" class="product-logo"
+                (error)="$any($event.target).src = 'data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2250%22 height=%2250%22%3E%3Crect fill=%22%23e0e0e0%22 width=%2250%22 height=%2250%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2220%22 fill=%22%23999%22%3E?%3C/text%3E%3C/svg%3E'" />
+            </td>
+            <td class="name-cell">
+              <span class="product-name">{{ product.name }}</span>
+              <span class="product-id">ID: {{ product.id }}</span>
+            </td>
+            <td class="description-cell">
+              <span class="product-description">{{ product.description }}</span>
+            </td>
+            <td>{{ product.date_release | date: 'dd/MM/yyyy' }}</td>
+            <td>{{ product.date_revision | date: 'dd/MM/yyyy' }}</td>
+            <td class="actions-cell">
+              <app-dropdown-menu (edit)="onEditProduct(product)"
+                (delete)="onDeleteProduct(product)"></app-dropdown-menu>
+            </td>
+          </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Pagination -->
+    <app-pagination [totalItems]="data.total" [pageSize]="data.pageSize" [currentPage]="data.currentPage"
+      [pageSizeOptions]="[5, 10, 20]" (pageChange)="onPageChange($event)"
+      (pageSizeChange)="onPageSizeChange($event)"></app-pagination>
+    }
+    }
+    }
+
+    <!-- Delete Confirmation Modal -->
+    <app-confirmation-modal [isVisible]="isDeleteModalVisible" [productName]="productToDelete?.name || ''"
+      (confirm)="confirmDelete()" (cancel)="cancelDelete()"></app-confirmation-modal>
+  </div>
+</div>

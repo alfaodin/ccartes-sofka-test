@@ -1,0 +1,117 @@
+<div class="pagination-container">
+  <div class="pagination-info">
+    <span class="range-text">{{ displayRange }}</span>
+  </div>
+
+  <div class="pagination-controls">
+    <div class="page-size-selector">
+      <label for="pageSize" class="sr-only">Elementos por página</label>
+      <select
+        id="pageSize"
+        class="page-size-select"
+        [value]="pageSize"
+        (change)="onPageSizeChange(+$any($event.target).value)">
+        @for (option of pageSizeOptions; track option) {
+          <option [value]="option">{{ option }} / página</option>
+        }
+      </select>
+    </div>
+
+    <div class="page-buttons">
+      <button
+        type="button"
+        class="page-btn"
+        [disabled]="isFirstPage"
+        (click)="previousPage()"
+        aria-label="Página anterior">
+        ‹
+      </button>
+
+      @if (totalPages <= 7) {
+        <!-- Show all pages if 7 or fewer -->
+        @for (page of pageNumbers; track page) {
+          <button
+            type="button"
+            class="page-btn"
+            [class.active]="page === currentPage"
+            (click)="goToPage(page)">
+            {{ page + 1 }}
+          </button>
+        }
+      } @else {
+        <!-- Show condensed pagination for more than 7 pages -->
+        @if (currentPage < 4) {
+          <!-- Show first 5, then ... last -->
+          @for (page of [0, 1, 2, 3, 4]; track page) {
+            <button
+              type="button"
+              class="page-btn"
+              [class.active]="page === currentPage"
+              (click)="goToPage(page)">
+              {{ page + 1 }}
+            </button>
+          }
+          <span class="ellipsis">...</span>
+          <button
+            type="button"
+            class="page-btn"
+            (click)="goToPage(totalPages - 1)">
+            {{ totalPages }}
+          </button>
+        } @else if (currentPage >= totalPages - 4) {
+          <!-- Show first ... then last 5 -->
+          <button
+            type="button"
+            class="page-btn"
+            (click)="goToPage(0)">
+            1
+          </button>
+          <span class="ellipsis">...</span>
+          @for (page of [totalPages - 5, totalPages - 4, totalPages - 3, totalPages - 2, totalPages - 1]; track page) {
+            <button
+              type="button"
+              class="page-btn"
+              [class.active]="page === currentPage"
+              (click)="goToPage(page)">
+              {{ page + 1 }}
+            </button>
+          }
+        } @else {
+          <!-- Show first ... middle ... last -->
+          <button
+            type="button"
+            class="page-btn"
+            (click)="goToPage(0)">
+            1
+          </button>
+          <span class="ellipsis">...</span>
+          @for (page of [currentPage - 1, currentPage, currentPage + 1]; track page) {
+            <button
+              type="button"
+              class="page-btn"
+              [class.active]="page === currentPage"
+              (click)="goToPage(page)">
+              {{ page + 1 }}
+            </button>
+          }
+          <span class="ellipsis">...</span>
+          <button
+            type="button"
+            class="page-btn"
+            (click)="goToPage(totalPages - 1)">
+            {{ totalPages }}
+          </button>
+        }
+      }
+
+      <button
+        type="button"
+        class="page-btn"
+        [disabled]="isLastPage"
+        (click)="nextPage()"
+        aria-label="Página siguiente">
+        ›
+      </button>
+    </div>
+  </div>
+</div>

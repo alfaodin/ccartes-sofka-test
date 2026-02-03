@@ -1,0 +1,138 @@
+[
+  {
+    "id": "trj-crd",
+    "name": "Tarjeta de Crédito",
+    "description": "Tarjeta de crédito con beneficios exclusivos y cashback test",
+    "logo": "https://www.visa.com.ec/dam/VCOM/regional/lac/SPA/Default/Pay%20With%20Visa/Tarjetas/visa-signature-400x225.jpg",
+    "date_release": "2024-01-15",
+    "date_revision": "2025-01-15"
+  },
+  {
+    "id": "cta-ahor",
+    "name": "Cuenta de Ahorros",
+    "description": "Cuenta de ahorros con alta rentabilidad y sin comisiones",
+    "logo": "https://www.visa.com.ec/dam/VCOM/regional/lac/SPA/Default/Pay%20With%20Visa/Tarjetas/visa-signature-400x225.jpg",
+    "date_release": "2024-02-01",
+    "date_revision": "2025-02-01"
+  },
+  {
+    "id": "prest-pers",
+    "name": "Préstamo Personal",
+    "description": "Préstamos personales con tasas preferenciales y aprobación rápida",
+    "logo": "https://www.visa.com.ec/dam/VCOM/regional/lac/SPA/Default/Pay%20With%20Visa/Tarjetas/visa-signature-400x225.jpg",
+    "date_release": "2024-03-10",
+    "date_revision": "2025-03-10"
+  },
+  {
+    "id": "inv-plazo",
+    "name": "Inversión a Plazo",
+    "description": "Inversiones a plazo fijo con rendimientos garantizados",
+    "logo": "https://www.visa.com.ec/dam/VCOM/regional/lac/SPA/Default/Pay%20With%20Visa/Tarjetas/visa-signature-400x225.jpg",
+    "date_release": "2024-04-05",
+    "date_revision": "2025-04-05"
+  },
+  {
+    "id": "seg-vida",
+    "name": "Seguro de Vida",
+    "description": "Protección integral para ti y tu familia con cobertura amplia",
+    "logo": "https://www.visa.com.ec/dam/VCOM/regional/lac/SPA/Default/Pay%20With%20Visa/Tarjetas/visa-signature-400x225.jpg",
+    "date_release": "2024-05-20",
+    "date_revision": "2025-05-20"
+  },
+  {
+    "id": "trj-deb",
+    "name": "Tarjeta de Débito",
+    "description": "Tarjeta de débito con acceso mundial y sin costos de mantenimiento",
+    "logo": "https://www.visa.com.ec/dam/VCOM/regional/lac/SPA/Default/Pay%20With%20Visa/Tarjetas/visa-signature-400x225.jpg",
+    "date_release": "2024-06-01",
+    "date_revision": "2025-06-01"
+  },
+  {
+    "id": "hipoteca",
+    "name": "Crédito Hipotecario",
+    "description": "Financiamiento hipotecario con las mejores tasas del mercado",
+    "logo": "https://www.visa.com.ec/dam/VCOM/regional/lac/SPA/Default/Pay%20With%20Visa/Tarjetas/visa-signature-400x225.jpg",
+    "date_release": "2024-06-15",
+    "date_revision": "2025-06-15"
+  },
+  {
+    "id": "cta-corr",
+    "name": "Cuenta Corriente",
+    "description": "Cuenta corriente empresarial con beneficios para tu negocio",
+    "logo": "https://www.visa.com.ec/dam/VCOM/regional/lac/SPA/Default/Pay%20With%20Visa/Tarjetas/visa-signature-400x225.jpg",
+    "date_release": "2024-07-01",
+    "date_revision": "2025-07-01"
+  },
+  {
+    "id": "cdt-plazo",
+    "name": "CDT a 90 días",
+    "description": "Certificado de depósito a término con rentabilidad garantizada",
+    "logo": "https://www.visa.com.ec/dam/VCOM/regional/lac/SPA/Default/Pay%20With%20Visa/Tarjetas/visa-signature-400x225.jpg",
+    "date_release": "2024-07-20",
+    "date_revision": "2025-07-20"
+  },
+  {
+    "id": "seg-auto",
+    "name": "Seguro de Auto",
+    "description": "Protección completa para tu vehículo con asistencia 24/7",
+    "logo": "https://www.visa.com.ec/dam/VCOM/regional/lac/SPA/Default/Pay%20With%20Visa/Tarjetas/visa-signature-400x225.jpg",
+    "date_release": "2024-08-05",
+    "date_revision": "2025-08-05"
+  },
+  {
+    "id": "trj-gold",
+    "name": "Tarjeta Gold",
+    "description": "Tarjeta premium con acceso a salones VIP y seguros incluidos",
+    "logo": "https://www.visa.com.ec/dam/VCOM/regional/lac/SPA/Default/Pay%20With%20Visa/Tarjetas/visa-signature-400x225.jpg",
+    "date_release": "2024-08-20",
+    "date_revision": "2025-08-20"
+  },
+  {
+    "id": "inv-bolsa",
+    "name": "Inversión en Bolsa",
+    "description": "Portafolio de inversión en acciones con asesoría especializada",
+    "logo": "https://www.visa.com.ec/dam/VCOM/regional/lac/SPA/Default/Pay%20With%20Visa/Tarjetas/visa-signature-400x225.jpg",
+    "date_release": "2024-09-01",
+    "date_revision": "2025-09-01"
+  },
+  {
+    "id": "cred-emp",
+    "name": "Crédito Empresarial",
+    "description": "Línea de crédito flexible para capital de trabajo empresarial",
+    "logo": "https://www.visa.com.ec/dam/VCOM/regional/lac/SPA/Default/Pay%20With%20Visa/Tarjetas/visa-signature-400x225.jpg",
+    "date_release": "2024-09-15",
+    "date_revision": "2025-09-15"
+  },
+  {
+    "id": "seg-hogar",
+    "name": "Seguro de Hogar",
+    "description": "Protección total para tu hogar contra todo riesgo",
+    "logo": "https://www.visa.com.ec/dam/VCOM/regional/lac/SPA/Default/Pay%20With%20Visa/Tarjetas/visa-signature-400x225.jpg",
+    "date_release": "2024-10-01",
+    "date_revision": "2025-10-01"
+  },
+  {
+    "id": "ahorro-nino",
+    "name": "Cuenta Ahorro Niños",
+    "description": "Cuenta de ahorros especial para el futuro de tus hijos",
+    "logo": "https://www.visa.com.ec/dam/VCOM/regional/lac/SPA/Default/Pay%20With%20Visa/Tarjetas/visa-signature-400x225.jpg",
+    "date_release": "2024-10-20",
+    "date_revision": "2025-10-20"
+  },
+  {
+    "id": "324",
+    "name": "fMi otra prueba",
+    "description": "asdfasdfasdfas asdfasdfdas",
+    "logo": "https://www.visa.com.ec/dam/VCOM/regional/lac/SPA/Default/Pay%20With%20Visa/Tarjetas/visa-signature-400x225.jpg",
+    "date_release": "2026-02-01",
+    "date_revision": "2027-02-01"
+  },
+  {
+    "id": "32411",
+    "name": "Christian Cartes",
+    "description": "tewst 2 para ver que onda sssdf",
+    "logo": "https://www.visa.com.ec/dam/VCOM/regional/lac/SPA/Default/Pay%20With%20Visa/Tarjetas/visa-signature-400x225.jpg",
+    "date_release": "2026-02-03",
+    "date_revision": "2027-02-03"
+  }
+]

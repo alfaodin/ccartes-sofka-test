@@ -1,0 +1,33 @@
+<button type="button"
+        class="dropdown-toggle"
+        cdkOverlayOrigin
+        #trigger="cdkOverlayOrigin"
+        (click)="toggleDropdown()"
+        aria-label="Menú de acciones"
+        [attr.aria-expanded]="isOpen">
+  <span class="icon-dots">⋮</span>
+</button>
+
+<ng-template cdkConnectedOverlay
+             [cdkConnectedOverlayOrigin]="trigger"
+             [cdkConnectedOverlayOpen]="isOpen"
+             [cdkConnectedOverlayPositions]="positions"
+             [cdkConnectedOverlayHasBackdrop]="true"
+             cdkConnectedOverlayBackdropClass="cdk-overlay-transparent-backdrop"
+             (backdropClick)="isOpen = false"
+             (detach)="isOpen = false">
+  <div class="dropdown-menu">
+    <button type="button"
+            class="dropdown-item"
+            (click)="onEdit()">
+      <span class="icon">✏️</span>
+      <span>Editar</span>
+    </button>
+    <button type="button"
+            class="dropdown-item dropdown-item-danger"
+            (click)="onDelete()">
+      <span class="icon">🗑️</span>
+      <span>Eliminar</span>
+    </button>
+  </div>
+</ng-template>

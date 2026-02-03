@@ -1,0 +1,33 @@
+@if (isVisible) {
+  <div class="modal-overlay"
+       (click)="onOverlayClick($event)"
+       (keydown.escape)="onEscapeKey()"
+       tabindex="-1">
+    <div class="modal-content" role="dialog" aria-modal="true" i18n-aria-label="Delete product dialog@@deleteProductDialog" aria-label="Eliminar Producto">
+      <div class="modal-header">
+        <h3 class="modal-title" i18n="Delete product title@@deleteProductTitle">Eliminar Producto</h3>
+      </div>
+
+      <div class="modal-body">
+        <p class="modal-message" i18n="Delete product message@@deleteProductMessage">
+          ¿Está seguro de que desea eliminar el producto: <strong>{{ productName }}</strong>? Esta acción no se puede deshacer.
+        </p>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button"
+                class="btn btn-secondary"
+                (click)="onCancel()"
+                i18n="Cancel button@@cancelButton">
+          Cancelar
+        </button>
+        <button type="button"
+                class="btn btn-danger"
+                (click)="onConfirm()"
+                i18n="Delete button@@deleteButton">
+          Eliminar
+        </button>
+      </div>
+    </div>
+  </div>
+}

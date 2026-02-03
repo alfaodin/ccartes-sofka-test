@@ -1,59 +1,27 @@
-# RepoUiInterviewMain
+Monorepo setup: backend + frontend with Docker support
+Apps live under apps/backend (Express, port 3002) and apps/frontend (Angular 19).
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.19.
-
-## Development server
-
-To start a local development server, run:
+## Install Dependencies
 
 ```bash
-ng serve
+npm install
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Running locally
 
-## Code scaffolding
+  npm run install:all        # install deps in both apps
+  npm run backend:start      # starts the backend on :3002
+  npm run frontend:dev       # starts Angular dev server on :4200
+                             # /bp is proxied to the backend automatically
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+--- Running with Docker ---
+  
+
+
+## RUN ALL THE APP USING DOCKER COMPOSE
 
 ```bash
-ng generate component component-name
+docker compose up --build  # builds and starts both services
 ```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+http://localhost:80        # frontend served by nginx
+                           # nginx proxies /bp to the backend container

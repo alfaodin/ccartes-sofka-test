@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" target-language="es" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="appSubtitle" datatype="html">
+        <source>Gestión de Productos</source>
+        <target>Gestión de Productos</target>
+      </trans-unit>
+      <trans-unit id="footerCopyright" datatype="html">
+        <source>© 2026 CCartes. Todos los derechos reservados.</source>
+        <target>© 2026 CCartes. Todos los derechos reservados.</target>
+      </trans-unit>
+      <trans-unit id="httpErrorUnexpected" datatype="html">
+        <source>Ocurrió un error inesperado</source>
+        <target>Ocurrió un error inesperado</target>
+      </trans-unit>
+      <trans-unit id="httpErrorNetwork" datatype="html">
+        <source>Error de red: <x id="message" equiv-text="error.error.message"/></source>
+        <target>Error de red: <x id="message" equiv-text="error.error.message"/></target>
+      </trans-unit>
+      <trans-unit id="httpError400" datatype="html">
+        <source>Solicitud inválida. Por favor verifique su entrada.</source>
+        <target>Solicitud inválida. Por favor verifique su entrada.</target>
+      </trans-unit>
+      <trans-unit id="httpError404" datatype="html">
+        <source>Producto no encontrado.</source>
+        <target>Producto no encontrado.</target>
+      </trans-unit>
+      <trans-unit id="httpError409" datatype="html">
+        <source>Ya existe un producto con este ID.</source>
+        <target>Ya existe un producto con este ID.</target>
+      </trans-unit>
+      <trans-unit id="httpError500" datatype="html">
+        <source>Error del servidor. Por favor intente más tarde.</source>
+        <target>Error del servidor. Por favor intente más tarde.</target>
+      </trans-unit>
+      <trans-unit id="httpError503" datatype="html">
+        <source>Servicio temporalmente no disponible. Por favor intente más tarde.</source>
+        <target>Servicio temporalmente no disponible. Por favor intente más tarde.</target>
+      </trans-unit>
+      <trans-unit id="httpError0" datatype="html">
+        <source>No se puede conectar al servidor. Por favor verifique su conexión a internet.</source>
+        <target>No se puede conectar al servidor. Por favor verifique su conexión a internet.</target>
+      </trans-unit>
+      <trans-unit id="httpErrorUnknown" datatype="html">
+        <source>Error desconocido</source>
+        <target>Error desconocido</target>
+      </trans-unit>
+      <trans-unit id="httpErrorDefault" datatype="html">
+        <source>Error <x id="status" equiv-text="error.status"/>: <x id="statusText" equiv-text="statusText"/></source>
+        <target>Error <x id="status" equiv-text="error.status"/>: <x id="statusText" equiv-text="statusText"/></target>
+      </trans-unit>
+      <trans-unit id="productListTitle" datatype="html">
+        <source>Productos Financieros</source>
+        <target>Productos Financieros</target>
+      </trans-unit>
+      <trans-unit id="addProductBtn" datatype="html">
+        <source>Agregar Producto</source>
+        <target>Agregar Producto</target>
+      </trans-unit>
+      <trans-unit id="searchPlaceholder" datatype="html">
+        <source>Buscar productos por nombre, descripción o ID...</source>
+        <target>Buscar productos por nombre, descripción o ID...</target>
+      </trans-unit>
+      <trans-unit id="searchAriaLabel" datatype="html">
+        <source>Buscar productos</source>
+        <target>Buscar productos</target>
+      </trans-unit>
+      <trans-unit id="loadingProducts" datatype="html">
+        <source>Cargando productos...</source>
+        <target>Cargando productos...</target>
+      </trans-unit>
+      <trans-unit id="noProductsTitle" datatype="html">
+        <source>No se encontraron productos</source>
+        <target>No se encontraron productos</target>
+      </trans-unit>
+      <trans-unit id="noProductsMessage" datatype="html">
+        <source>Intenta ajustar tu búsqueda o crear un nuevo producto.</source>
+        <target>Intenta ajustar tu búsqueda o crear un nuevo producto.</target>
+      </trans-unit>
+      <trans-unit id="tableHeaderLogo" datatype="html">
+        <source>Logo</source>
+        <target>Logo</target>
+      </trans-unit>
+      <trans-unit id="tableHeaderName" datatype="html">
+        <source>Nombre</source>
+        <target>Nombre</target>
+      </trans-unit>
+      <trans-unit id="tableHeaderDescription" datatype="html">
+        <source>Descripción</source>
+        <target>Descripción</target>
+      </trans-unit>
+      <trans-unit id="tableHeaderReleaseDate" datatype="html">
+        <source>Fecha de Lanzamiento</source>
+        <target>Fecha de Lanzamiento</target>
+      </trans-unit>
+      <trans-unit id="tableHeaderRevisionDate" datatype="html">
+        <source>Fecha de Revisión</source>
+        <target>Fecha de Revisión</target>
+      </trans-unit>
+      <trans-unit id="tableHeaderActions" datatype="html">
+        <source>Acciones</source>
+        <target>Acciones</target>
+      </trans-unit>
+      <trans-unit id="deleteProductDialog" datatype="html">
+        <source>Eliminar Producto</source>
+        <target>Eliminar Producto</target>
+      </trans-unit>
+      <trans-unit id="deleteProductTitle" datatype="html">
+        <source>Eliminar Producto</source>
+        <target>Eliminar Producto</target>
+      </trans-unit>
+      <trans-unit id="deleteProductMessage" datatype="html">
+        <source>¿Está seguro de que desea eliminar el producto: <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/><x id="INTERPOLATION" equiv-text="{{ productName }}"/><x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>? Esta acción no se puede deshacer.</source>
+        <target>¿Está seguro de que desea eliminar el producto: <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/><x id="INTERPOLATION" equiv-text="{{ productName }}"/><x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>? Esta acción no se puede deshacer.</target>
+      </trans-unit>
+      <trans-unit id="cancelButton" datatype="html">
+        <source>Cancelar</source>
+        <target>Cancelar</target>
+      </trans-unit>
+      <trans-unit id="deleteButton" datatype="html">
+        <source>Eliminar</source>
+        <target>Eliminar</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

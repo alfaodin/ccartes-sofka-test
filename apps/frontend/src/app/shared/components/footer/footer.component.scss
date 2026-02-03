@@ -1,0 +1,24 @@
+@use '../../../../styles/index' as *;
+
+.app-footer {
+  background: var(--primary-dark);
+  color: var(--text-white);
+  margin-top: auto;
+}
+
+.footer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: var(--spacing-lg);
+  text-align: center;
+
+  @include mobile {
+    padding: var(--spacing-md);
+  }
+}
+
+.footer-text {
+  font-size: 0.875rem;
+  color: var(--text-white);
+  margin: 0;
+}
